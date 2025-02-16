@@ -1,132 +1,84 @@
-/* General Styles */
-body {
-    font-family: 'Poppins', sans-serif;
+* {
     margin: 0;
     padding: 0;
-    background: linear-gradient(to right, #ff9966, #ff5e62);
-    color: white;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background: linear-gradient(45deg, #ff9a9e, #fad0c4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
     text-align: center;
-    transition: background 0.5s ease-in-out;
-}
-
-/* Header */
-header {
-    background: rgba(0, 0, 0, 0.8);
+    background: white;
     padding: 20px;
-    font-size: 24px;
-    font-weight: bold;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
 }
 
-/* Button */
-button {
-    background: #ffcc00;
+.calculator {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+input {
+    width: 90%;
+    height: 50px;
+    margin-bottom: 10px;
+    font-size: 20px;
+    text-align: right;
+    padding: 10px;
+    border-radius: 8px;
     border: none;
-    padding: 10px 15px;
-    margin: 10px;
+    background: #f3f3f3;
+}
+
+.buttons, .advanced-buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+button {
+    padding: 15px;
+    font-size: 18px;
     cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
+    border: none;
+    border-radius: 8px;
     transition: 0.3s;
 }
 
 button:hover {
-    background: #ffd633;
-}
-
-/* About Section */
-.about {
-    padding: 30px;
-}
-
-.profile-img {
-    width: 150px;
-    border-radius: 50%;
-    border: 4px solid white;
-    transition: transform 0.3s ease-in-out;
-}
-
-.profile-img:hover {
-    transform: scale(1.1);
-}
-
-.highlight {
-    color: #ffcc00;
-    font-weight: bold;
-}
-
-/* Skills */
-.skills ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.skills li {
-    display: inline-block;
-    background: #222;
-    padding: 10px;
-    margin: 5px;
-    border-radius: 8px;
-    color: white;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.skills li:hover {
-    background: #ffcc00;
-    color: black;
-}
-
-/* Projects */
-.projects {
-    padding: 30px;
-}
-
-.project-card {
-    background: rgba(255, 255, 255, 0.1);
-    padding: 20px;
-    margin: 15px;
-    border-radius: 10px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, background 0.3s;
-}
-
-.project-card:hover {
     transform: scale(1.05);
-    background: rgba(255, 255, 255, 0.3);
 }
 
-/* Contact Section */
-.contact {
-    background: #222;
+.operator {
+    background: #ff7f50;
     color: white;
-    padding: 30px;
 }
 
-/* Footer */
-footer {
-    background: black;
-    padding: 15px;
-    font-size: 14px;
+.equals {
+    background: #1e90ff;
+    color: white;
 }
 
-/* Dark Mode */
-.dark-mode {
-    background: #1a1a1a;
-    color: #fff;
+.advanced-buttons button {
+    background: #9370db;
+    color: white;
 }
 
-.dark-mode .skills li {
-    background: #444;
-}
-
-.dark-mode .skills li:hover {
-    background: #ffcc00;
-}
-
-.dark-mode .project-card {
+#theme-toggle {
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 16px;
     background: #333;
-}
-
-.dark-mode .project-card:hover {
-    background: #444;
+    color: white;
+    border-radius: 8px;
 }
